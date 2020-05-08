@@ -5,3 +5,4 @@ urlpatterns = [
     path('add',views.addarticle,name="addpage"),
     path('edit',views.editarticle,name="editpage"),
 ]
+

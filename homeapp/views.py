@@ -2,12 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def index(requests):
-    return HttpResponse("Index Page")
+    return render(requests,"homeapp/index.html")
 
 def addarticle(requests):
-    return HttpResponse("Add Article Page")
+    return render(requests,"Add Article Page")
 
 def editarticle(requests):
-    return HttpResponse("Edit Article Page")
+    return render(requests,"Edit Article Page")
     
     
