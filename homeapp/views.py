@@ -5,9 +5,9 @@ def index(requests):
     return render(requests,"homeapp/index.html")
 
 def addarticle(requests):
-    return render(requests,"Add Article Page")
+    return render(requests,"homeapp/add.html")
 
 def editarticle(requests):
-    return render(requests,"Edit Article Page")
+    return render(requests,"homeapp/add.html")
     
     
