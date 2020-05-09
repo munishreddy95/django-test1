@@ -27,7 +27,7 @@ def editarticle(requests,articleid):
         getdata.title=title
         getdata.description=description
         getdata.save()
-        return redirect(addarticle)
+        return redirect(index)
     else:
         context = {
             "data":Article.objects.get(id=articleid),
