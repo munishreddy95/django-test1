@@ -1,4 +1,18 @@
 {% extends 'layout.html' %}
 {% block mainbody %}
-<h1>INdex Page</h1>
+<div class="col-md-12">
+    {% for data in articlelist %}
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-9">
+                 <h4 style="font-size: 24px">{{ data.title }}</h4>
+            </div>
+            <div class="col-md-3">
+                <a href=" {% url 'editpage' data.id %}"><button class="btn btn-danger" style="padding:0px;padding:4px">edit</button></a>
+            </div>
+        </div>
+        <p>{{ data.description }}</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock mainbody %}
