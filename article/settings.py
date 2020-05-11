@@ -74,27 +74,27 @@ WSGI_APPLICATION = 'article.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'article',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-    }
-}
-
-# aws database settings
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'article',
-#         'USER': 'admin',
-#         'PASSWORD': 'Munish123',
-#         'HOST': 'article.c4xpsfmvfy7e.us-east-1.rds.amazonaws.com',
-#         'PORT': '3306',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
 #     }
 # }
+
+# aws database settings
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'article',
+        'USER': 'admin',
+        'PASSWORD': 'Munish123',
+        'HOST': 'article.c4xpsfmvfy7e.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}
 
 # DATABASES = {
 #     'default': {
