@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block mainbody %}
-<form method="post" action="{% url 'editpage' data.id %}">
+<form method="post" action="{% url 'editpage' data.id %}" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="container">
         <div class="col-md-12 form-group">
@@ -10,6 +10,10 @@
         <div class="col-md-12 form-group">
             <label for="description">Description</label>
             <textarea id="description" name="description"  class="form-control">{{ data.description }}</textarea>
+        </div>
+        <div class="col-md-12 form-group">
+            <label for="description">Article Image</label>
+            <input type="file" id="image" name="articleimage" class="form-control">
         </div>
         <div class="col-md-12 form-group">
             <button type="submit" class="btn btn-primary">submit</button>

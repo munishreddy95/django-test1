@@ -12,7 +12,8 @@ def addarticle(requests):
     if requests.method == "POST":
         title = requests.POST.get('title')
         description = requests.POST.get('description')
-        insertdata = Article(title=title,description=description)
+        articleimage = requests.FILES.get('articleimage')
+        insertdata = Article(title=title,description=description,articleimage=articleimage)
         insertdata.save()
         return redirect(index)
     else:
@@ -23,9 +24,11 @@ def editarticle(requests,articleid):
     if requests.method == "POST":
         title = requests.POST.get('title')
         description = requests.POST.get('description')
+        articleimage = requests.FILES.get('articleimage')
         getdata = Article.objects.get(pk=articleid)
         getdata.title=title
         getdata.description=description
+        getdata.articleimage=articleimage
         getdata.save()
         return redirect(index)
     else:

@@ -4,11 +4,19 @@
     {% for data in articlelist %}
     <div class="col-md-6">
         <div class="row">
-            <div class="col-md-9">
-                 <h4 style="font-size: 24px">{{ data.title }}</h4>
+            <div class="col-md-5">
+                <img src="{{ data.articleimage.url }}" width="96px" height="96px">
             </div>
-            <div class="col-md-3">
-                <a href=" {% url 'editpage' data.id %}"><button class="btn btn-danger" style="padding:0px;padding:4px">edit</button></a>
+            <div class="col-md-7">
+                <div class="row">
+                    <a href=" {% url 'editpage' data.id %}" class="pull-right"><button class="btn btn-danger" style="padding:0px;padding:4px">edit</button></a>
+                </div>
+                <div class="row">
+                    title : <h6>{{ data.title }}</h6>
+                </div>
+                 <div class="row">
+                    postedat : <h6>{{ data.created_at }}</h6>
+                </div>
             </div>
         </div>
         <p>{{ data.description }}</p>
