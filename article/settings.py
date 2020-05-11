@@ -84,12 +84,24 @@ WSGI_APPLICATION = 'article.wsgi.application'
 #     }
 # }
 
+# aws database settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'article',
+        'USER': 'admin',
+        'PASSWORD': 'Munish123',
+        'HOST': 'article.c4xpsfmvfy7e.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite'),
+#     }
+# }
 
 
 # Password validation
